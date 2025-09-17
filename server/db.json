@@ -1,0 +1,36 @@
+{
+  "users": [],
+  "todos": [
+    {
+      "id": 2,
+      "name": "đi bộ",
+      "status": "todo"
+    },
+    {
+      "id": 3,
+      "name": "cầu lông",
+      "status": "todo"
+    },
+    {
+      "id": 5,
+      "name": "đá bóng",
+      "status": "todo"
+    },
+    {
+      "id": 4,
+      "name": "đá bóng",
+      "status": "todo"
+    },
+    {
+      "name": "hihi",
+      "status": "todo",
+      "id": 6
+    },
+    {
+      "name": "aaa",
+      "status": "todo",
+      "id": 7
+    }
+  ],
+  "products": []
+}
