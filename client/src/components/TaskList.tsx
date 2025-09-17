@@ -16,7 +16,6 @@ export default function TaskList() {
   const [newlyAddedId, setNewlyAddedId] = useState<number | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
 
-  // Lấy dữ liệu từ server
   async function fetchTasks() {
     setLoading(true);
     setError(null);
@@ -64,10 +63,9 @@ export default function TaskList() {
       window.removeEventListener("todo:added", onAdded as EventListener);
       window.removeEventListener("todo:refresh", onRefresh as EventListener);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+   
   }, []);
 
-  // Toggle trạng thái
   async function handleToggleStatus(task: Task): Promise<void> {
     const nextStatus = task.status === "done" ? "todo" : "done";
     setTasks((prev) => prev.map((t) => (t.id === task.id ? { ...t, status: nextStatus } : t)));
@@ -80,7 +78,6 @@ export default function TaskList() {
     }
   }
 
-  // Xóa task
   async function handleDelete(taskId: number): Promise<void> {
     if (!confirm("Bạn có chắc muốn xóa công việc này?")) return;
     const old = tasks;
@@ -94,7 +91,6 @@ export default function TaskList() {
     }
   }
 
-  // Chỉnh tên
   async function handleEdit(task: Task): Promise<void> {
     const newName = prompt("Chỉnh tên công việc:", task.name);
     if (newName == null) return;

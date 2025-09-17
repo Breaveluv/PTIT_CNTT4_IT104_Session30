@@ -10,7 +10,6 @@ interface Task {
   status: "done" | "todo" | string;
 }
 
-// Component con để sử dụng useLoading
 function AppContent() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [error, setError] = useState<string | null>(null);
